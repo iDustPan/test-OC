@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7942838B1E1368580080D5DC /* XBorderPreferentialPoliciesPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7942838A1E1368580080D5DC /* XBorderPreferentialPoliciesPickerCell.m */; };
+		7942838E1E1368700080D5DC /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7942838D1E1368700080D5DC /* TableViewController.m */; };
 		797D387E1E0E98BC001CE8DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D387D1E0E98BC001CE8DE /* main.m */; };
 		797D38811E0E98BC001CE8DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D38801E0E98BC001CE8DE /* AppDelegate.m */; };
 		797D38841E0E98BC001CE8DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D38831E0E98BC001CE8DE /* ViewController.m */; };
@@ -18,6 +20,10 @@
 
 /* Begin PBXFileReference section */
 		25815E2F375B2E5A8EAE9605 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		794283891E1368570080D5DC /* XBorderPreferentialPoliciesPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBorderPreferentialPoliciesPickerCell.h; sourceTree = "<group>"; };
+		7942838A1E1368580080D5DC /* XBorderPreferentialPoliciesPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBorderPreferentialPoliciesPickerCell.m; sourceTree = "<group>"; };
+		7942838C1E1368700080D5DC /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		7942838D1E1368700080D5DC /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		797D38791E0E98BC001CE8DE /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797D387D1E0E98BC001CE8DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		797D387F1E0E98BC001CE8DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +59,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		794283881E13682F0080D5DC /* TableViewCellLayout */ = {
+			isa = PBXGroup;
+			children = (
+				794283891E1368570080D5DC /* XBorderPreferentialPoliciesPickerCell.h */,
+				7942838A1E1368580080D5DC /* XBorderPreferentialPoliciesPickerCell.m */,
+				7942838C1E1368700080D5DC /* TableViewController.h */,
+				7942838D1E1368700080D5DC /* TableViewController.m */,
+			);
+			path = TableViewCellLayout;
+			sourceTree = "<group>";
+		};
 		797D38701E0E98BC001CE8DE = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +91,7 @@
 		797D387B1E0E98BC001CE8DE /* test */ = {
 			isa = PBXGroup;
 			children = (
+				794283881E13682F0080D5DC /* TableViewCellLayout */,
 				797D387F1E0E98BC001CE8DE /* AppDelegate.h */,
 				797D38801E0E98BC001CE8DE /* AppDelegate.m */,
 				797D38821E0E98BC001CE8DE /* ViewController.h */,
@@ -231,6 +249,8 @@
 				797D38841E0E98BC001CE8DE /* ViewController.m in Sources */,
 				797D38811E0E98BC001CE8DE /* AppDelegate.m in Sources */,
 				797D387E1E0E98BC001CE8DE /* main.m in Sources */,
+				7942838E1E1368700080D5DC /* TableViewController.m in Sources */,
+				7942838B1E1368580080D5DC /* XBorderPreferentialPoliciesPickerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

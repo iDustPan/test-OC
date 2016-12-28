@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 
@@ -21,7 +22,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.redButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.redButton addTarget:self action:@selector(redButtonTouchAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.redButton addTarget:self
+                       action:@selector(redButtonTouchAction:)
+             forControlEvents:UIControlEventTouchUpInside];
     [self.redButton setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.redButton];
     [self.redButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -36,6 +39,9 @@
 
 - (void)redButtonTouchAction:(UIButton *)sender
 {
+    TableViewController *tableVC = [[TableViewController alloc] init];
+    [self showViewController:tableVC sender:nil];
+    
     sender.selected = !sender.selected;
     CGFloat buttonHeight = sender.selected ? 100 : 50;
 //    (
