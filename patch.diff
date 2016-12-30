@@ -1,35 +1,48 @@
-From 9a5cf4681561852b15e934747d5200d3356f0c88 Mon Sep 17 00:00:00 2001
+From 5b8d6bb86cc7308496eb5430c77a4ca109c8698b Mon Sep 17 00:00:00 2001
 From: xupan <xupan@haodf.com>
-Date: Fri, 30 Dec 2016 10:59:07 +0800
-Subject: [PATCH] test2
+Date: Fri, 30 Dec 2016 11:17:08 +0800
+Subject: [PATCH] tibia
 
 ---
- test/test/ViewController.h | 2 +-
- test/test/ViewController.m | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+ test/test/AppDelegate.m    | 2 ++
+ test/test/ViewController.h | 1 +
+ test/test/ViewController.m | 2 ++
+ 3 files changed, 5 insertions(+)
 
+diff --git a/test/test/AppDelegate.m b/test/test/AppDelegate.m
+index 13367e9..7363335 100644
+--- a/test/test/AppDelegate.m
++++ b/test/test/AppDelegate.m
+@@ -18,6 +18,8 @@
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+     // Override point for customization after application launch.
+     return YES;
++    
++    // fsjiofjsoirjoi
+ }
+ 
+ 
 diff --git a/test/test/ViewController.h b/test/test/ViewController.h
-index 4325067..3d74f66 100644
+index 3d74f66..53aab54 100644
 --- a/test/test/ViewController.h
 +++ b/test/test/ViewController.h
-@@ -10,6 +10,6 @@
- 
+@@ -11,5 +11,6 @@
  @interface ViewController : UIViewController
  
--
-+@property (nonatomic, strong) UIView *test;
+ @property (nonatomic, strong) UIView *test;
++// 我在.h做了修改
  @end
  
 diff --git a/test/test/ViewController.m b/test/test/ViewController.m
-index 9836105..0778088 100644
+index 0778088..757d7c7 100644
 --- a/test/test/ViewController.m
 +++ b/test/test/ViewController.m
-@@ -18,7 +18,7 @@
-     [super viewDidLoad];
+@@ -19,6 +19,8 @@
      // Do any additional setup after loading the view, typically from a nib.
      
--    // textsttseafad f
-+    // textsttseaadsfsadfadsfsadfasdf
+     // textsttseaadsfsadfadsfsadfasdf
++    
++    //.m也做了修改
  }
  
  
