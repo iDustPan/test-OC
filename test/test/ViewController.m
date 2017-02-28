@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <SDCycleScrollView.h>
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSArray *titles;
+
+@property (nonatomic, strong) SDCycleScrollView *scrollView;
 
 @end
 
@@ -16,11 +21,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    // textsttseaadsfsadfadsfsadfasdf
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    _titles = @[@"这是第一篇文章", @"这是第二篇文章", @"这是第三篇文章"];
     
-    //.m也做了修改
+    _scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:nil placeholderImage:nil];
+    _scrollView.onlyDisplayText = YES;
+    _scrollView.titlesGroup = _titles;
+    _scrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
+    _scrollView.frame = CGRectMake(30, 200, self.view.frame.size.width - 60, 33);
+    _scrollView.titleLabelHeight = 33;
+    _scrollView.titleLabelTextFont = [UIFont systemFontOfSize:12];
+    _scrollView.titleLabelTextColor = [UIColor blueColor];
+    [self.view addSubview:_scrollView];
 }
 
 
