@@ -6,10 +6,13 @@ platform :ios, '8.0'
 target 'test' do
 
 pod 'Masonry'
+<<<<<<< HEAD
 pod 'SDCycleScrollView'
 pod 'TTTAttributedLabel'
 pod 'AFNetworking'
+=======
 pod 'PINCache'
+>>>>>>> 21c63f7fdb32a4ff631d979ebcaccc03b6eb74d0
 
 end
 
