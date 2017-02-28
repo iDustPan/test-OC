@@ -9,7 +9,6 @@ pod 'Masonry'
 pod 'SDCycleScrollView'
 pod 'TTTAttributedLabel'
 pod 'AFNetworking'
-pod 'PINCache'
 
 end
 
