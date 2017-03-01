@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _titles = @[@"这是第一篇文章", @"这是第二篇文章", @"这是第三篇文章"];
+    _titles = @[@"这是第一篇文章", @"这是第二篇文章"];
     
     _scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:nil placeholderImage:nil];
     _scrollView.onlyDisplayText = YES;
