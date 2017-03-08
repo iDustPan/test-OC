@@ -40,6 +40,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    
+    // This is a method didReceiveMemoryWaining
+    
+    UIView *view = [UIView new];
 }
 
 
