@@ -14,6 +14,7 @@
 		797D38871E0E98BC001CE8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797D38851E0E98BC001CE8DE /* Main.storyboard */; };
 		797D38891E0E98BC001CE8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797D38881E0E98BC001CE8DE /* Assets.xcassets */; };
 		797D388C1E0E98BC001CE8DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797D388A1E0E98BC001CE8DE /* LaunchScreen.storyboard */; };
+		79BFF86A1E6FE4A500F862F4 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFF8691E6FE4A500F862F4 /* Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		797D38881E0E98BC001CE8DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797D388B1E0E98BC001CE8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797D388D1E0E98BC001CE8DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BFF8681E6FE4A500F862F4 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		79BFF8691E6FE4A500F862F4 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		C7C82BDD61CD909DD6B87F6A /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE093F40276950F6EC9F5181 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +89,8 @@
 				797D38801E0E98BC001CE8DE /* AppDelegate.m */,
 				797D38821E0E98BC001CE8DE /* ViewController.h */,
 				797D38831E0E98BC001CE8DE /* ViewController.m */,
+				79BFF8681E6FE4A500F862F4 /* Animal.h */,
+				79BFF8691E6FE4A500F862F4 /* Animal.m */,
 				797D38851E0E98BC001CE8DE /* Main.storyboard */,
 				797D38881E0E98BC001CE8DE /* Assets.xcassets */,
 				797D388A1E0E98BC001CE8DE /* LaunchScreen.storyboard */,
@@ -227,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				797D38841E0E98BC001CE8DE /* ViewController.m in Sources */,
+				79BFF86A1E6FE4A500F862F4 /* Animal.m in Sources */,
 				797D38811E0E98BC001CE8DE /* AppDelegate.m in Sources */,
 				797D387E1E0E98BC001CE8DE /* main.m in Sources */,
 			);
