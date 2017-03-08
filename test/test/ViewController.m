@@ -15,10 +15,12 @@
 
 @property (nonatomic, strong) SDCycleScrollView *scrollView;
 @property (nonatomic, assign) NSInteger idx;
+
 @end
 
 @implementation ViewController
 //21行有个操作
+//我也在21行有操作
 - (void)viewDidLoad {
     [super viewDidLoad];
     //我要24行
