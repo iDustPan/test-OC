@@ -14,6 +14,7 @@
 		797D38871E0E98BC001CE8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797D38851E0E98BC001CE8DE /* Main.storyboard */; };
 		797D38891E0E98BC001CE8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797D38881E0E98BC001CE8DE /* Assets.xcassets */; };
 		797D388C1E0E98BC001CE8DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797D388A1E0E98BC001CE8DE /* LaunchScreen.storyboard */; };
+		79BFF86A1E6FE4A500F862F4 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFF8691E6FE4A500F862F4 /* Animal.m */; };
 		79BFF8671E6FE43300F862F4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFF8661E6FE43300F862F4 /* Person.m */; };
 		79BFF86A1E6FE4A500F862F4 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFF8691E6FE4A500F862F4 /* Animal.m */; };
 		79BFF8671E6FE43300F862F4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BFF8661E6FE43300F862F4 /* Person.m */; };
@@ -31,6 +32,8 @@
 		797D38881E0E98BC001CE8DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797D388B1E0E98BC001CE8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797D388D1E0E98BC001CE8DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79BFF8681E6FE4A500F862F4 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		79BFF8691E6FE4A500F862F4 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		79BFF8651E6FE43300F862F4 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		79BFF8661E6FE43300F862F4 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		79BFF8681E6FE4A500F862F4 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				797D38801E0E98BC001CE8DE /* AppDelegate.m */,
 				797D38821E0E98BC001CE8DE /* ViewController.h */,
 				797D38831E0E98BC001CE8DE /* ViewController.m */,
+				79BFF8681E6FE4A500F862F4 /* Animal.h */,
+				79BFF8691E6FE4A500F862F4 /* Animal.m */,
 				79BFF8651E6FE43300F862F4 /* Person.h */,
 				79BFF8661E6FE43300F862F4 /* Person.m */,
 				79BFF8681E6FE4A500F862F4 /* Animal.h */,
