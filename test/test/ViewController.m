@@ -68,6 +68,9 @@
     // rebase1
     
     // 这个是tower的提交
+    
+    
+    UIView *view2 = [UIView new];
 }
 
 
