@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSArray *titles;
 
 @property (nonatomic, strong) SDCycleScrollView *scrollView;
-
+@property (nonatomic, assign) NSInteger idx;
 @end
 
 @implementation ViewController
