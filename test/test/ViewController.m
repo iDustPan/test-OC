@@ -23,6 +23,7 @@
     [super viewDidLoad];
     //我要24行
     
+    //我也要24行
     self.automaticallyAdjustsScrollViewInsets = NO;
     _titles = @[@"这是第一篇文章", @"这是第二篇文章"];
     
