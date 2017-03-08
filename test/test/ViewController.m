@@ -45,6 +45,9 @@
     // This is a method didReceiveMemoryWaining
     
     UIView *view = [UIView new];
+    
+    
+    UIFont *font = [UIFont systemFontOfSize:12];
 }
 
 
