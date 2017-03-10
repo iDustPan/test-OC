@@ -23,39 +23,17 @@
 //我也在21行有操作
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //我要24行
-    
-    //我也要24行
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    _titles = @[@"这是第一篇文章", @"这是第二篇文章"];
-    
-    _scrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:nil placeholderImage:nil];
-    _scrollView.onlyDisplayText = YES;
-    _scrollView.titlesGroup = _titles;
-    _scrollView.scrollDirection = UICollectionViewScrollDirectionVertical;
-    _scrollView.frame = CGRectMake(30, 200, self.view.frame.size.width - 60, 33);
-    _scrollView.titleLabelHeight = 33;
-    _scrollView.titleLabelTextFont = [UIFont systemFontOfSize:12];
-    _scrollView.titleLabelTextColor = [UIColor blueColor];
-    [self.view addSubview:_scrollView];
+  
     
     
-    //master 提交
-
-    //Tower在master上的提交
-
-    //sourceTree在Tower上的提交
     
-    // 这个说找tower上的提交
+    for (NSInteger i = 0; i < 1000; i++) {
+        NSLog(@"%ld", i);
+    }
     
-    // master上不知道。已经在开发了
-    
-    //master第二次提交
-    
-    // 我要53行
-
-    
-    //我也要53行
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"come down");
+    });
     
 }
 
