@@ -8,6 +8,8 @@
 
 #import "XPPCollectionViewController.h"
 
+static NSInteger const kPrefetchRowCount = 10;
+
 @interface XPPCollectionViewController ()
 <
 UICollectionViewDataSource,
@@ -81,5 +83,121 @@ UICollectionViewDelegate
     return collectionView;
 }
 
+/** Prefetch a certain number of images for rows prior to and subsequent to the currently visible cells
+ *
+ * @param  tableView   The tableview for which we're going to prefetch images.
+ */
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self prefetchImagesForTableView:self.collectionView];
+}
+
+- (void)prefetchImagesForTableView:(UICollectionView *)tableView {
+    NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
+    if ([indexPaths count] == 0) return;
+    
+    NSIndexPath *minimumIndexPath = indexPaths[0];
+    NSIndexPath *maximumIndexPath = [indexPaths lastObject];
+    
+    // they should be sorted already, but if not, update min and max accordingly
+    
+    for (NSIndexPath *indexPath in indexPaths) {
+        if ([minimumIndexPath compare:indexPath] == NSOrderedDescending)
+            minimumIndexPath = indexPath;
+        if ([maximumIndexPath compare:indexPath] == NSOrderedAscending)
+            maximumIndexPath = indexPath;
+    }
+    
+    // build array of imageURLs for cells to prefetch
+    
+    NSMutableArray<NSIndexPath *> *prefetchIndexPaths = [NSMutableArray array];
+    
+    NSArray<NSIndexPath *> *precedingRows = [self collectionView:tableView indexPathsForPrecedingRows:kPrefetchRowCount fromIndexPath:minimumIndexPath];
+    [prefetchIndexPaths addObjectsFromArray:precedingRows];
+    
+    NSArray<NSIndexPath *> *followingRows = [self tableView:tableView indexPathsForFollowingRows:kPrefetchRowCount fromIndexPath:maximumIndexPath];
+    [prefetchIndexPaths addObjectsFromArray:followingRows];
+    
+    NSLog(@"%@", prefetchIndexPaths);
+    
+    // build array of imageURLs for cells to prefetch (how you get the image URLs will vary based upon your implementation)
+    
+//    NSMutableArray<NSURL *> *urls = [NSMutableArray array];
+//    for (NSIndexPath *indexPath in prefetchIndexPaths) {
+//        NSURL *url = self.objects[indexPath.row].imageURL;
+//        if (url) {
+//            [urls addObject:url];
+//        }
+//    }
+    
+    // now prefetch
+    
+//    if ([urls count] > 0) {
+//        [[SDWebImagePrefetcher sharedImagePrefetcher] prefetchURLs:urls];
+//    }
+}
+
+/** Retrieve NSIndexPath for a certain number of rows preceding particular NSIndexPath in the table view.
+ *
+ * @param  collectionView  The tableview for which we're going to retrieve indexPaths.
+ * @param  count      The number of rows to retrieve
+ * @param  indexPath  The indexPath where we're going to start (presumably the first visible indexPath)
+ *
+ * @return            An array of indexPaths.
+ */
+
+- (NSArray<NSIndexPath *> *)collectionView:(UICollectionView *)collectionView indexPathsForPrecedingRows:(NSInteger)count fromIndexPath:(NSIndexPath *)indexPath {
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    NSInteger row = indexPath.row;
+    NSInteger section = indexPath.section;
+    
+    for (NSInteger i = 0; i < count; i++) {
+        if (row == 0) {
+            if (section == 0) {
+                return indexPaths;
+            } else {
+                section--;
+                row = [collectionView numberOfItemsInSection:section] - 1;
+            }
+        } else {
+            row--;
+        }
+        [indexPaths addObject:[NSIndexPath indexPathForItem:row inSection:section]];
+    }
+    
+    return indexPaths;
+}
+
+/** Retrieve NSIndexPath for a certain number of following particular NSIndexPath in the table view.
+ *
+ * @param  collectionView  The tableview for which we're going to retrieve indexPaths.
+ * @param  count      The number of rows to retrieve
+ * @param  indexPath  The indexPath where we're going to start (presumably the last visible indexPath)
+ *
+ * @return            An array of indexPaths.
+ */
+
+- (NSArray<NSIndexPath *> *)tableView:(UICollectionView *)collectionView indexPathsForFollowingRows:(NSInteger)count fromIndexPath:(NSIndexPath *)indexPath {
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    NSInteger row = indexPath.row;
+    NSInteger section = indexPath.section;
+    NSInteger rowCountForSection = [collectionView numberOfItemsInSection:section];
+    
+    for (NSInteger i = 0; i < count; i++) {
+        row++;
+        if (row == rowCountForSection) {
+            row = 0;
+            section++;
+            if (section == [collectionView numberOfSections]) {
+                return indexPaths;
+            }
+            rowCountForSection = [collectionView numberOfItemsInSection:section];
+        }
+        [indexPaths addObject:[NSIndexPath indexPathForItem:row inSection:section]];
+    }
+    
+    return indexPaths;
+}
 
 @end
