@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSArray *titles;
 
-@property (nonatomic, strong) SDCycleScrollView *scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, assign) NSInteger idx;
 
 @end
@@ -24,17 +24,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+    NSMutableArray *muta = [NSMutableArray array];
     
+    dispatch_queue_t seriaQue = dispatch_queue_create("pan.text.que", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"outbegin");
     
+    self.scrollView = [[UIScrollView alloc] init];
+    self.scrollView.backgroundColor = [UIColor redColor];
+    self.scrollView.contentSize = CGSizeMake(100, 1000);
+    self.scrollView.frame = self.view.bounds;
+    [self.view addSubview:self.scrollView];
     
-    for (NSInteger i = 0; i < 1000; i++) {
-        NSLog(@"%ld", i);
-    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"come down");
+        for (int i = 0; i < 5; i ++) {
+            NSLog(@"begin%d", i);
+            dispatch_barrier_async(seriaQue, ^{
+                
+                [muta removeAllObjects];
+                for (int i = 0; i < 1000; i++) {
+                    NSLog(@"%@--%d", [NSThread currentThread], i);
+                    [muta addObject:@(i)];
+                }
+                
+                
+                for (NSNumber *number in muta) {
+                    NSLog(@"output:%d", [number intValue]);
+                }
+                NSLog(@"end%d", i);
+            });
+        }
     });
     
+    NSLog(@"outEnd");
 }
 
 
