@@ -1,20 +1,23 @@
 //
-//  ViewController.m
+//  NavViewController.m
 //  test
 //
-//  Created by 徐攀 on 2016/12/24.
-//  Copyright © 2016年 com.borderXLab. All rights reserved.
+//  Created by 徐攀 on 2017/7/10.
+//  Copyright © 2017年 com.borderXLab. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "NavViewController.h"
 
-@interface ViewController ()<UIViewControllerRestoration>
-
-
+@interface NavViewController ()<UIViewControllerRestoration>
 
 @end
 
-@implementation ViewController
+@implementation NavViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -24,14 +27,10 @@
 }
 
 + (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
-    ViewController *tabBar = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    NavViewController *tabBar = [[NavViewController alloc] initWithNibName:nil bundle:nil];
     return tabBar;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
-}
 
 
 @end

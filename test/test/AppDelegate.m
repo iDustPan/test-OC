@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,24 +16,30 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    TabBarViewController *tabVC = [[TabBarViewController alloc] initWithNibName:nil bundle:nil];
+    
+    self.window.rootViewController = tabVC;
+    [self.window makeKeyAndVisible];
     return YES;
-    
-    // fsjiofjsoirjoi
-    
-    
-    // 这是提交5爱打架覅大家覅哦A级 加加加囧囧
-    
-    
-    // 这是提交6
-    
-    // master1
-    
-    
-    // hahahahaha 
 }
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {
+    [application ignoreSnapshotOnNextApplicationLaunch];
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
